@@ -1,0 +1,58 @@
+.titulo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #405DE6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ajuste para evitar que el primer post se pierda */
+    min-height: 100vh; /* Asegura que el contenedor tenga espacio suficiente */
+    padding-top: 80px; /* Añade algo de margen arriba */
+}
+.post {
+    width: 350px;
+    height: 450px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    display: flex;
+    flex-direction: column; /* Distribuye los elementos en columna */
+    justify-content: space-between; /* Espacia los elementos */
+    padding: 15px;
+    text-align: center;
+    animation: mover 2s infinite ease-in-out; /* Animación continua */
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    height: 5px;
+    text-align: left;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del div sin perder proporciones */
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+}
+@keyframes mover {
+    0% { transform: translateY(-50px); } /* Empieza un poco arriba */
+    50% { transform: translateY(50px); } /* Se mueve hacia abajo */
+    100% { transform: translateY(-50px); } /* Vuelve a subir */
+}
